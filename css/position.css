@@ -1,0 +1,37 @@
+.container{
+    height: 400px;
+    width: 450px;
+    background-color: red;
+    /* overflow: hidden; */
+    margin: auto;
+    position: relative;
+}
+img{
+    height: 100%;
+    width: 100% ;
+}
+.lt{
+    position: absolute;
+    background-color: gray;
+    font-size: 50px;
+    color: red;
+    left: 0px;
+    top: 50%;
+    border: none;
+    opacity: 0.8;
+
+    
+}
+.gt{
+    position: absolute;
+    background-color: gray;
+    font-size: 50px;
+    color: red;
+    right: 0px;
+    top: 50%;
+    border: none;
+    opacity: 0.8;
+
+
+    
+}

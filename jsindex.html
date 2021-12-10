@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/jsindex.css">
+</head>
+<body>
+<!-- 
+    <div id="point" onmouseover="test_hover()" onmouseout="out_hover()">   
+    <p id="show"></p>
+</div>
+<script>
+    const test_hover=()=>{
+        console.log("heloo");
+        document.getElementById("show").innerHTML="Hello hover";
+        // alert("psyco");
+        // document.write("hellooooooo");
+    }
+    const out_hover=()=>{
+        console.log("out");
+        document.getElementById("show").innerHTML="";
+
+    }
+</script>
+    -->
+<!-- <label for="pass">Password:</label>
+<input type="password" id="password">
+<input type="checkbox" id="chk" value="show" onclick="view()">show
+<script>
+    const view =()=>{
+        console.log("kel");
+ let a =document.getElementById("password");
+ if(password.type=="password"){
+     password.type="text";
+
+ }else{
+     password.type="password";
+ }
+}    
+</script> -->
+<label for="pass">Password:</label>
+<input type="password" id="password" onkeyup="test_hover()">
+<!-- <input type="checkbox" id="chk" value="show" onclick="view()">show -->
+
+<p id="show"></p>
+<script>
+ const test_hover=()=>{
+        console.log("heloo");
+        let res= document.getElementById("password").value;
+        if(res != null){
+         document.getElementById("show").innerHTML=res;
+        //  document.write(res);
+        }
+  
+    }
+</script>
+
+</body>
+</html>
