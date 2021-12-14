@@ -5,8 +5,34 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="asset/css/bootstrap.min.css">
+    <style>
+        .container{
+            position: relative;
+        }
+        .container .left{
+            left:-33px;
+            top: 50%;
+            position: absolute;
+        }
+        .container .right{
+            
+            top: 50%;
+            position: absolute;
+        }
+    </style>
+
 </head>
 <body>
+    <div class="container col-md-8 col-12 bg-dark "  onmouseover="noslide()" onmouseout="slide()">
+        <img id="in_slider" src="images/1.jpg" height="500px" width="500px">
+        <button class="left btn btn-primary fs-3 pointer-cursor" onclick="left_slider()">&lt;</button>
+        <button class="right btn btn-primary  fs-3  pointer-cursor" onclick="right_slider()">&gt;</button>
+
+    </div>
+
+
+
     <script>
         // let student={
         //     gname:"sindu",
@@ -18,7 +44,7 @@
 
 
 
-        let mytext="I live in knowwhere, what about you about KNOWWHERE?";
+        // let mytext="I live in knowwhere, what about you about KNOWWHERE?";
         // document.write(`<br>length of string=${mytext.length}`);
         // document.write(`<br> The position of about is in ${mytext.indexOf("about")}`);
         // document.write(`<br> The position of about is in ${mytext.lastIndexOf("about")}<br>`);
@@ -42,13 +68,13 @@
         // document.write(`<br>${Math.ceil(4.3)}`);
         // document.write(`<br>${Math.floor  (4.3)}`);
         // document.write(`<br>${(Math.random()*100)+400}`);
-        let num =Math.random()*10;
-        document.write(`<br> ${Math.floor(num)+1}`);
+        // let num =Math.random()*10;
+        // document.write(`<br> ${Math.floor(num)+1}`);
 
 
 
-        let num2= 400+(Math.random()*200);
-            document.write(`<br> ${Math.floor(num2)+1}`);  
+        // let num2= 400+(Math.random()*200);
+        //     document.write(`<br> ${Math.floor(num2)+1}`);  
         
         // let num1 =Math.random()*600;
         //  // document.write(`<br> ${Math.floor(num1)+1}`);
@@ -59,6 +85,99 @@
         //     let num2= 400+(Math.random()*200);
         //     document.write(`<br> ${Math.floor(num2)+1}`);  
         // }
+
+            // let date = new Date();
+            // document.write(`<br>${date}`);
+            // document.write(`<br>${date.getFullYear()}`);
+            // document.write(`<br>${date.getMonth()+1}`);
+            // document.write(`<br>${date.getDay()}`);
+            // document.write(`<br>${date.getDate()}`);
+            // document.write(`<br>${date.getHours()-12}`);
+            // document.write(`<br>${date.getMinutes()}`);
+            // document.write(`<br>${date.getSeconds()}<br>`);
+            // document.write(`<br>${date.getMilliseconds()}`);
+
+
+            // let number = prompt("enter the number");
+            // for(i=1;i<=10;i++)
+            // {
+            //     let res = number*i;
+            //     document.write(`<br>${number}*${i} = ${res} `);
+            // }
+
+            
+            // let number = prompt("enter the year");
+
+            //     if((number % 4) == 0){
+            //         alert(" leap year");
+            //     }else{
+            //         alert(" not leat year");
+            //     }
+
+            // const fruits = ["Banana", "Orange", "Apple", "Mango","Pine"];
+            // document.write(fruits);
+
+            // document.write(`${fruits.length}<br>`);
+
+            // //
+            // document.write(fruits[0]);
+            
+            // fruits.pop();
+            // document.write(fruits);0
+            // fruits.push("pears");
+            // document.write(fruits);
+
+            //for deleting first element
+            // fruits.shift();
+            // document.write(`<br>${fruits});
+            
+            //for keeping the first element
+            // fruits.unshift("hello");
+            // document.write(`<br>${fruits}`);
+            
+
+            // fruits.splice(1,0,"lemon","watermelon");0000000000000
+            // document.write(`<br>${fruits}`);
+
+            // const falful= fruits.slice(2);
+            // document.write(`<br>${falful}`);
+            // document.write(`<br>${fruits.reverse()}`);
+                let image_slid=["1.jpg","2.jpg","3.jpg","4.jpg","5.jpg"];
+                let a = image_slid.length;
+                let i=0;
+                document.write(a);
+                let set = setInterval(slider,2000);
+                
+                function slider(){
+                    i++;
+                    i=i%a;
+                        document.getElementById("in_slider").src=`images/${image_slid[i]}`;
+                        console.log("hello");
+                    }
+                function left_slider(){
+                    i--;
+                    if(i<0){
+                        // document.getElementById("in_slider").src=`images/${image_slid[]}`;
+                     i=a-1;   
+                    }
+                        document.getElementById("in_slider").src=`images/${image_slid[i]}`;
+
+                }
+                function right_slider(){
+                    i++;
+                    i=i%a;
+                        document.getElementById("in_slider").src=`images/${image_slid[i]}`;
+
+                }
+                function noslide(){
+                   clearInterval(set);
+                    console.log("kelo");
+                }
+                function slide(){ 
+                    set = setInterval(slider,2000);
+                    console.log("kelo");
+                }
+                
  </script>
 
 </body>
